@@ -1,0 +1,594 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below. 
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= requre bootstrap
+ *= require bootstrap-theme
+ *= require_tree .
+ *= require_self
+ */
+/*VARS*/
+/*END VARS*/
+/*THIN PROGRESS BAR*/
+.thin_progress {
+  height: 2px; }
+
+/*THIN PROGRESS BAR*/
+body {
+  overflow-X: hidden; }
+
+.container-fluid {
+  margin: 0;
+  width: 100%; }
+
+/*FLAS HOLDER*/
+.flash_holder {
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  width: 30%;
+  text-align: center; }
+
+/*END FLASH HOLDER*/
+/*APP CONTAINER*/
+#im_your_father_luke {
+  padding-left: 0px;
+  padding-right: 0px;
+  overflow-X: hidden;
+  width: 100%;
+  margin: 0; }
+
+/*END APP CONTAINER*/
+.below_menu {
+  width: 100%;
+  position: absolute;
+  top: 5rem;
+  padding: 1rem 1.5rem; }
+
+/*jumbotron*/
+.jumbotron {
+  background: -moz-linear-gradient(-45deg, rgba(171, 211, 238, 0.63) 0%, rgba(171, 211, 238, 0.72) 23%, rgba(171, 211, 238, 0.73) 27%, rgba(137, 195, 235, 0.85) 59%, #d5ebfb 100%);
+  background: -webkit-linear-gradient(-45deg, rgba(171, 211, 238, 0.63) 0%, rgba(171, 211, 238, 0.72) 23%, rgba(171, 211, 238, 0.73) 27%, rgba(137, 195, 235, 0.85) 59%, #d5ebfb 100%);
+  background: linear-gradient(135deg, rgba(171, 211, 238, 0.63) 0%, rgba(171, 211, 238, 0.72) 23%, rgba(171, 211, 238, 0.73) 27%, rgba(137, 195, 235, 0.85) 59%, #d5ebfb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1abd3ee', endColorstr='#d5ebfb',GradientType=1 );
+  z-index: -1;
+  position: fixed;
+  top: 5rem;
+  height: 30rem;
+  width: 100%;
+  margin-bottom: 0; }
+  .jumbotron h1 {
+    color: #b3b3b3; }
+
+.below_jumbo {
+  width: 100%;
+  position: absolute;
+  top: 25rem;
+  margin: 0.3rem 0 0 0;
+  background-color: white;
+  padding-top: 2rem; }
+
+/*spinner*/
+.cssload-container {
+  width: 100%;
+  height: 12px;
+  text-align: center; }
+
+.cssload-speeding-wheel {
+  width: 10px;
+  height: 10px;
+  margin: 0 auto;
+  border: 3px solid #1515eb;
+  border-radius: 50%;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: cssload-spin 800ms infinite linear;
+  -o-animation: cssload-spin 800ms infinite linear;
+  -ms-animation: cssload-spin 800ms infinite linear;
+  -webkit-animation: cssload-spin 800ms infinite linear;
+  -moz-animation: cssload-spin 800ms infinite linear; }
+
+@keyframes cssload-spin {
+  100% {
+    transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-o-keyframes cssload-spin {
+  100% {
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-ms-keyframes cssload-spin {
+  100% {
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-webkit-keyframes cssload-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-moz-keyframes cssload-spin {
+  100% {
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+/*MODAL*/
+.modal .modal-dialog {
+  width: 80%; }
+
+/*pages_show*/
+.pages_show {
+  margin: 0 2rem; }
+  .pages_show .pages_show_content {
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: 1px;
+    border-color: #D8EAF0;
+    padding: 0 2rem;
+    margin: auto;
+    text-align: justify; }
+    .pages_show .pages_show_content h1 {
+      border: 1px solid #D8EAF0;
+      border-radius: 10px;
+      padding-left: 4rem; }
+
+/*menu_index*/
+.menu_index {
+  margin-bottom: 0;
+  position: fixed;
+  width: 100%;
+  font-size: larger;
+  height: 5rem;
+  z-index: 1;
+  /*link group that comes after login/logout buttons*/
+  /*login_info (login/logout buton group)*/ }
+  .menu_index .navbar-brand {
+    padding-left: 4rem; }
+  .menu_index .after_login_info {
+    margin-left: 5rem; }
+  .menu_index li:hover {
+    color: red;
+    background-color: #b3e6ff; }
+  .menu_index li {
+    border-right-style: solid;
+    border-width: 1px;
+    border-right-color: #C4CCCF; }
+  .menu_index .login_info button {
+    margin-left: 1rem; }
+
+/*chat_messages_index*/
+.chat_expanded {
+  width: 40%;
+  height: 400px;
+  height: 250px;
+  overflow-Y: scroll; }
+
+.chat_messages_index {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 3rem;
+  margin-bottom: 1rem; }
+  .chat_messages_index .message {
+    font-size: small;
+    border: 1px solid white;
+    padding: 0 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 1rem; }
+    .chat_messages_index .message .message_time {
+      text-align: right;
+      font-size: 8px; }
+  .chat_messages_index .right {
+    margin-left: 20%;
+    background-color: #CCF0FC; }
+  .chat_messages_index .left {
+    margin-right: 20%;
+    background-color: #D3DEBD; }
+  .chat_messages_index .chat_button {
+    right: 0; }
+  .chat_messages_index .input_and_submit_button {
+    margin-top: 1.5rem; }
+    .chat_messages_index .input_and_submit_button .form_input_label {
+      display: none; }
+    .chat_messages_index .input_and_submit_button .form_input {
+      display: inline-block; }
+    .chat_messages_index .input_and_submit_button .submit_button {
+      margin-left: 3rem;
+      display: inline-block; }
+
+/*SIDEBAR*/
+.sidebar .list_group_title {
+  background-color: #E8E8E8;
+  margin: 1rem 0; }
+  .sidebar .list_group_title h3 {
+    margin: 0.1rem; }
+  .sidebar .list_group_title .badge {
+    background-color: white; }
+.sidebar .user_avatar_in_group_list {
+  border-radius: 100%;
+  display: inline-block; }
+.sidebar .list_group_more_info_button {
+  color: white; }
+
+.cssload-container {
+  position: fixed;
+  z-index: 100;
+  margin: auto; }
+
+/*SCROLLBARS*/
+::-webkit-scrollbar {
+  width: 5px; }
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
+
+/*APPOINTMENTS CALENDAR*/
+.appointments_calendar {
+  margin-left: 4rem;
+  /*WEEK VIEW*/
+  /*END WEEK VIEW*/
+  /*DAY VIEW*/
+  /* END DAY VIEW */
+  /*MONTH BOX*/
+  /*END MONTH BOX*/ }
+  .appointments_calendar .view_controlls {
+    text-align: center; }
+    .appointments_calendar .view_controlls button {
+      margin: 0 0.5rem; }
+  .appointments_calendar .any_time_appointment {
+    margin: 1rem;
+    text-align: justify; }
+  .appointments_calendar .prev_next_controlls {
+    margin-bottom: 1rem; }
+    .appointments_calendar .prev_next_controlls button {
+      margin: 0 0.5rem;
+      width: 6rem; }
+  .appointments_calendar .week_day_panel.lg_device {
+    width: 11%; }
+  .appointments_calendar .week_day_panel {
+    margin: 0.5rem;
+    padding: 0;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    border-color: #D8EAF0; }
+    .appointments_calendar .week_day_panel .day_heading {
+      background-color: #C3DFE8;
+      text-align: center;
+      padding: 0px; }
+    .appointments_calendar .week_day_panel .day_heading.passed {
+      background-color: white; }
+    .appointments_calendar .week_day_panel .day_heading.today {
+      background-color: #2593B8; }
+    .appointments_calendar .week_day_panel .day_body {
+      font-size: 12px; }
+      .appointments_calendar .week_day_panel .day_body .init_appointment_btn {
+        width: 80%;
+        white-space: normal;
+        padding: 0rem;
+        font-size: small;
+        margin-bottom: 0.5rem; }
+      .appointments_calendar .week_day_panel .day_body .doctor_avatar {
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 100%; }
+      .appointments_calendar .week_day_panel .day_body .doctor_name {
+        margin-bottom: 0px;
+        margin-left: 1rem; }
+      .appointments_calendar .week_day_panel .day_body .doctor_appointment {
+        border-bottom: 1px solid; }
+  .appointments_calendar .day_panel {
+    margin: 0.5rem;
+    padding: 0;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    border-color: #D8EAF0; }
+    .appointments_calendar .day_panel .day_heading {
+      background-color: #C3DFE8;
+      text-align: center;
+      padding: 0px; }
+    .appointments_calendar .day_panel .day_body {
+      font-size: 12px;
+      padding: 2rem; }
+      .appointments_calendar .day_panel .day_body .init_appointment_btn {
+        width: 80%;
+        white-space: normal;
+        padding: 0rem;
+        font-size: small;
+        margin-bottom: 0.5rem; }
+      .appointments_calendar .day_panel .day_body .doctor_avatar {
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 100%; }
+      .appointments_calendar .day_panel .day_body .doctor_name {
+        margin-bottom: 0px;
+        margin-left: 1rem; }
+      .appointments_calendar .day_panel .day_body .doctor_appointment {
+        border-bottom: 1px solid; }
+  .appointments_calendar .month_box {
+    text-align: center;
+    height: 14rem;
+    display: table; }
+    .appointments_calendar .month_box .week_row {
+      display: table-row; }
+    .appointments_calendar .month_box .day {
+      display: table-cell;
+      border: 1px solid;
+      width: 3rem;
+      height: 2rem;
+      border-color: #D8EAF0;
+      cursor: pointer; }
+    .appointments_calendar .month_box .today {
+      background-color: #DFB5EB; }
+    .appointments_calendar .month_box .current_week {
+      background-color: #90C3D4; }
+    .appointments_calendar .month_box .week_row:hover {
+      background-color: #90C3D4; }
+    .appointments_calendar .month_box .day:hover {
+      background-color: #127596; }
+
+/*APPOINTMENT_PROPOSAL_NEW*/
+.appointment_proposal_new {
+  width: 75%;
+  margin: auto; }
+  .appointment_proposal_new .checkbox_desc_group {
+    display: table;
+    border-bottom: 1px solid; }
+    .appointment_proposal_new .checkbox_desc_group div {
+      display: table-cell;
+      padding-bottom: 0px; }
+    .appointment_proposal_new .checkbox_desc_group .time_range {
+      display: table-cell;
+      padding-left: 3rem; }
+    .appointment_proposal_new .checkbox_desc_group .checkbox {
+      width: 20px;
+      height: 20px;
+      padding-bottom: 0px; }
+  .appointment_proposal_new .doc_name_and_avatar {
+    margin: auto;
+    width: 50%;
+    padding-top: 2rem;
+    border-bottom-style: solid;
+    border-width: 1px;
+    padding-bottom: 1rem; }
+  .appointment_proposal_new .doctor_avatar {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%; }
+  .appointment_proposal_new .doctor_name {
+    margin-left: 3rem;
+    font-size: larger; }
+  .appointment_proposal_new .extra_details {
+    margin-top: 2rem; }
+  .appointment_proposal_new .login_button_group {
+    text-align: center; }
+    .appointment_proposal_new .login_button_group button {
+      margin: 2rem 1rem 0; }
+
+/*END APPOINTMENT PROPOSAL NEW*/
+/*PRICE LIST INDEX*/
+.pricelist {
+  padding-top: 2rem; }
+  .pricelist .disclaimer {
+    text-align: center;
+    font-size: larger; }
+  .pricelist .category_name {
+    text-align: center;
+    font-size: larger;
+    margin: 1rem; }
+  .pricelist tbody > .price_item:nth-child(odd) {
+    background-color: #BFE4F2; }
+  .pricelist .price_item:hover {
+    background-color: #F5D5C9; }
+
+/*END PRICE LIST INDEX*/
+/*DOCTOR INDEX*/
+.doctor_index {
+  margin: auto; }
+  .doctor_index .center-block {
+    text-align: center; }
+  .doctor_index .thumbnail {
+    display: inline-block;
+    background-color: #6FC2DE;
+    margin: auto;
+    max-width: 400px;
+    margin-top: 1rem;
+    margin-left: 1rem; }
+    .doctor_index .thumbnail .avatar {
+      height: 100px;
+      width: 100px; }
+    .doctor_index .thumbnail .profile_info {
+      text-align: center;
+      margin: 0.5rem 0;
+      border-top: 1px solid #BFD2D9; }
+
+/*END DOCTOR INDEX*/
+/*menu_index animation*/
+@keyframes example {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.menu_index {
+  height: 5rem;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-timing-function: linear; }
+
+/*END menu_index animation*/
+/* DASHBOARD*/
+.dashboard {
+  display: flex;
+  /*CREATE USER FORM*/
+  /*END CREATE USER FORM*/ }
+  .dashboard .left_panel {
+    height: 100%;
+    font-size: larger;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #A7DFF2;
+    padding: 0; }
+    .dashboard .left_panel .role_category {
+      text-align: center; }
+    .dashboard .left_panel ul {
+      padding: 0; }
+      .dashboard .left_panel ul li {
+        list-style-type: none;
+        border: 1px solid #D5EFF7;
+        height: auto;
+        min-height: 3rem;
+        background-color: #CAE1E8;
+        padding: 0 1rem;
+        cursor: pointer; }
+      .dashboard .left_panel ul li:hover {
+        background-color: #3EC3F0; }
+  .dashboard .create_user_form {
+    width: 50%;
+    margin: auto;
+    margin-top: 4rem;
+    text-align: center;
+    border: 1px solid #A7DFF2;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    font-size: larger; }
+    .dashboard .create_user_form input {
+      text-align: center; }
+    .dashboard .create_user_form input, .dashboard .create_user_form textarea {
+      width: 70%;
+      height: 3.5rem; }
+    .dashboard .create_user_form .form_input {
+      margin-bottom: 2rem; }
+
+/* END DASHBOARD */
+/*FILE INPUT*/
+.form_input .label_holder {
+  position: relative; }
+.form_input .image_to_preview {
+  width: 300px;
+  height: 300px; }
+.form_input .file_input_container [type=file] {
+  cursor: inherit;
+  display: block;
+  font-size: 0px;
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0; }
+
+/*END FILE INPUT*/
+/*USERS INDEX*/
+.admin_user_index {
+  padding-top: 3rem; }
+  .admin_user_index .search {
+    border: 1px solid #A7DFF2;
+    border-radius: 1.5rem;
+    padding: 2rem 2rem;
+    width: 60%;
+    margin: auto; }
+    .admin_user_index .search .search_button {
+      margin-top: 1rem; }
+    .admin_user_index .search .search_bar input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #A7DFF2;
+      border-color: #cccccc; }
+    .admin_user_index .search .chekbox_holder {
+      margin-top: 1rem; }
+      .admin_user_index .search .chekbox_holder .show_name {
+        display: inline-block;
+        margin-left: 1rem; }
+      .admin_user_index .search .chekbox_holder .checkbox {
+        vertical-align: center;
+        display: inline-block; }
+  .admin_user_index .search_results {
+    border-top: 1px solid #A7DFF2;
+    margin-top: 0rem;
+    margin: 0px;
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .admin_user_index .search_results .user_box {
+      text-align: center;
+      border-radius: 1.5rem;
+      border: 1px solid #A7DFF2;
+      padding: 1rem;
+      margin: 0.5rem;
+      min-width: 40rem; }
+      .admin_user_index .search_results .user_box img {
+        width: 48px;
+        height: 48px; }
+
+/*END USERS INDEX*/
+/*APP WIDE PAGINATION*/
+.pagination_main {
+  text-align: center; }
+
+/*END APP WIDE PAGINATION*/
+/*MENU_INDEX_EDIT*/
+.menu_edit_index {
+  margin: 2rem; }
+  .menu_edit_index h3 {
+    text-align: center;
+    margin-bottom: 2rem; }
+  .menu_edit_index .edit_box {
+    margin-top: 12rem;
+    text-align: center; }
+  .menu_edit_index .form button {
+    margin: 1rem; }
+  .menu_edit_index .controll_buttons {
+    margin: 1rem; }
+
+/*END MENU_INDEX_EDIT*/
+/*IMAGES_INDEX*/
+.images_index .search_results {
+  display: flex; }
+  .images_index .search_results .image_holder {
+    text-align: center;
+    border: 1px solid #A7DFF2;
+    border-radius: 1.5rem;
+    margin: 0.5rem; }
+    .images_index .search_results .image_holder .image {
+      width: 120px; }
+
+/*END IMAGES_INDEX*/
+/*BLOGGER_LAST_TEN*/
+.blogger_last_ten {
+  border: 1px solid #A7DFF2;
+  border-radius: 1.5rem; }
+  .blogger_last_ten .title {
+    margin-left: 4rem; }
+  .blogger_last_ten .body {
+    margin: 2rem;
+    height: 25rem;
+    overflow-Y: scroll;
+    border-top: 1px solid black; }
+
+/*END BLOGGER_LAST_TEN*/
+.appointment_proposal_index th {
+  text-align: center;
+  padding: 0 1rem; }
+.appointment_proposal_index td {
+  padding: 0.5rem 1rem; }
+  .appointment_proposal_index td .unregistered_disclaimer {
+    text-align: right;
+    margin: 0; }
+    .appointment_proposal_index td .unregistered_disclaimer span {
+      font-size: smaller;
+      border: 1px solid black;
+      padding: 0.1rem; }
+
+/*APPOINTMENT_PROPOSAL_INDEX*/
+
+/*# sourceMappingURL=application.css.map */

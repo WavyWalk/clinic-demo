@@ -1,0 +1,71 @@
+module Components
+  module PriceList
+    class Index < RW
+      expose
+
+      def init
+        yields_phantom_ready
+      end
+
+      def get_initial_state
+        {
+          price_categories: ModelCollection.new,
+        }
+      end
+
+      def component_did_mount
+        PriceCategory.index(component: self).then do |price_categories|
+          begin
+          Services::MetaTagsController.new('pricelist for dental services', 'prices for our dental services', 'pricelist price dental service')
+          set_state price_categories: price_categories
+          
+          component_phantom_ready
+          rescue Exception => e
+            p e
+          end
+        end
+      end
+
+      def render
+        t(:div, {className: 'pricelist container'}, 
+          progress_bar,
+          t(:p, {className: 'disclaimer'}, 'the prices are not final and depend on patients condition'),
+          t(:div, {className: 'table-responsive'}, 
+            t(:table, {className: 'table table-striped table-condensed'}, 
+              t(:thead, {}, 
+                t(:tr, {}, 
+                  t(:th, {}, 'service'),
+                  t(:th, {}, 'price')
+                )
+              ),
+              t(:tbody, {}, 
+
+                splat_each(state.price_categories) do |price_category|                
+                  [ 
+                  t(:tr, {className: 'category_name'},
+                    t(:td, {colSpan: 2}, 
+                      "#{price_category.name}"
+                    )
+                  ),
+                  *splat_each(price_category.price_items) do |price_item|
+                    t(:tr, {className: 'price_item'}, 
+                      t(:td, {}, 
+                        "#{price_item.name}",
+                        if price_item.offered_service
+                          link_to('+more detatils', "/offered_services/#{price_item.offered_service.slug}")
+                        end
+                      ),
+                      t(:td, {}, "#{price_item.price}")
+                    )
+                  end
+                  ]
+                end                  
+              ) 
+            )
+          )
+        )
+      end
+
+    end
+  end
+end

@@ -1,0 +1,23 @@
+version: '3'
+services:
+#  db:
+#    image: postgres
+#    volumes:
+#      - ./tmp/db:/var/lib/postgresql/data
+  web:
+    container_name: "clinic_schedule_demo"
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3001 -b '0.0.0.0'"
+    volumes:
+      - /etc/nginx/sites-available:/etc/nginx/sites-available
+    ports:
+      - "3001:3001"
+    environment:
+      - RAILS_ENV=development
+      - RACK_ENV=development
+      - DOCKERIZED=true
+      - RAILS_SERVE_STATIC_FILES=true
+    network_mode: host
+#      DATABASE_URL: postgres://postgres@db
+#    depends_on:
+#      - db
